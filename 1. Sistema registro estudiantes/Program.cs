@@ -52,15 +52,13 @@ namespace _1.Sistema_registro_estudiantes
             }
 
 
-            
-          
+            public void mostrarDatos()
+
+            {
+                Console.WriteLine($"El nombre del estudiante es: {nombre} | su promedio es de: {calcularProm()} | el estudiante está: {resultado()} ");
 
 
-
-
-
-
-
+            }
 
 
 
@@ -69,19 +67,16 @@ namespace _1.Sistema_registro_estudiantes
 
 
 
-
-
-
-
         static void Main(string[] args)
 
         {
+            List<Estudiante> estudiantes = new List<Estudiante>();
 
+            Console.Write("¿Cuántos estudiantes desea registrar?: ");
 
+            int n = int.Parse(Console.ReadLine());
 
-
-
-
+            
 
 
 
