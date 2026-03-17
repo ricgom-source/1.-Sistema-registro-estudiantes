@@ -76,7 +76,32 @@ namespace _1.Sistema_registro_estudiantes
 
             int n = int.Parse(Console.ReadLine());
 
-            
+            for (int i = 0; i < n; i++)
+            {
+                Estudiante e = new Estudiante();
+
+                Console.WriteLine($"\nEstudiante {i + 1}");
+
+                Console.Write("Nombre del estudiante: "); e.nombre = Console.ReadLine();
+
+                Console.Write("Resultado de la nota 1: "); e.nota1 = double.Parse(Console.ReadLine());
+
+                Console.Write("Resultado de la nota 2: "); e.nota2 = double.Parse(Console.ReadLine());
+
+                Console.Write("Resultado de la nota 3: "); e.nota3 = double.Parse(Console.ReadLine());
+
+                estudiantes.Add(e);
+            }
+
+            Console.WriteLine("\n--- LISTADO DE  ESTUDIANTES  ---");
+
+            foreach (Estudiante e in estudiantes)
+
+            {
+                e.mostrarDatos();
+            }
+
+
 
 
 
