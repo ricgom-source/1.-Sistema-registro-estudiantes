@@ -31,7 +31,25 @@ namespace _1.Sistema_registro_estudiantes
             
             }
             
-               
+            public string resultado()
+
+            {
+                if (calcularProm()>=61)
+
+                {
+                    return ("Usted ha sido aprobado");
+
+                }
+
+                else
+
+                {
+
+                    return ("Usted esta reprobado");
+
+                }
+
+            }
 
 
             
