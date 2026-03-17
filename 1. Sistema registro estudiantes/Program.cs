@@ -97,13 +97,17 @@ namespace _1.Sistema_registro_estudiantes
 
             Estudiante pro = estudiantes[0];
 
+            Console.WriteLine();
+
             Console.WriteLine("\n--- LISTADO DE  ESTUDIANTES  ---");
 
             foreach (Estudiante e in estudiantes)
 
             {
                 e.mostrarDatos();
+
                 Console.WriteLine();
+
                 if(e.calcularProm()>pro.calcularProm())
 
                 {
