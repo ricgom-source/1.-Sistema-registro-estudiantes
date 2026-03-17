@@ -103,13 +103,33 @@ namespace _2.Sistema_de_inventario_de_productos
 
                 productos.Add(p);
 
+            }
 
+            double valorinventario = 0;
 
+            Producto masCaro = productos[0];
+
+            Console.WriteLine($"\n---INVENTARIO---");
+
+            foreach(Producto p in productos)
+
+            {
+                Console.WriteLine();
+
+                p.mostrarDatos();
+
+                valorinventario += p.calcularValortot();
+
+                if(p.precio>masCaro.precio)
+
+                {
+
+                    masCaro = p;
+
+                }
 
 
             }
-
-
 
 
 
