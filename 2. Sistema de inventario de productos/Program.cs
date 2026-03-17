@@ -16,7 +16,7 @@ namespace _2.Sistema_de_inventario_de_productos
 
             public double precio;
 
-            public double cantidad;
+            public int cantidad;
 
 
             public double calcularValortot()
@@ -34,15 +34,22 @@ namespace _2.Sistema_de_inventario_de_productos
                 if (cantidad == 0)
 
                 {
-                    return ();
+                    return ("Sin existencias");
+
+                }
+
+                else if(cantidad<=6)
+
+                {
+
+                    return ("stock bajo");
 
                 }
 
                 else
 
                 {
-
-                    return ();
+                    return ("stock suficiente");
 
                 }
 
@@ -52,7 +59,11 @@ namespace _2.Sistema_de_inventario_de_productos
             public void mostrarDatos()
 
             {
-                Console.WriteLine($"El nombre del estudiante es: {nombre} | su promedio es de: {calcularProm():F2} | el estudiante está: {resultado()} ");
+                Console.WriteLine($"Producto: {nombre} | su precio es de: Q{precio:F2}");
+
+                Console.WriteLine();
+
+                Console.WriteLine($"Cantidad de producto: {cantidad}| Total de inventario: Q{calcularValortot():F2}");
 
 
             }
