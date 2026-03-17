@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="1. Sistema registro estudiantes/1. Sistema registro estudiantes.csproj" Id="d0910437-f791-45ec-b716-43e92bd058f6" />
   <Project Path="2. Sistema de inventario de productos/2. Sistema de inventario de productos.csproj" Id="48d436c5-a280-49f3-a5cf-5246786f3a23" />
+  <Project Path="3. Sistema de empleados/3. Sistema de empleados.csproj" Id="46a4b9a6-8d79-4656-ba88-77d4e06dd957" />
 </Solution>
