@@ -37,7 +37,7 @@ namespace _1.Sistema_registro_estudiantes
                 if (calcularProm()>=61)
 
                 {
-                    return ("Usted ha sido aprobado");
+                    return ("Aprobado");
 
                 }
 
@@ -45,7 +45,7 @@ namespace _1.Sistema_registro_estudiantes
 
                 {
 
-                    return ("Usted esta reprobado");
+                    return ("Reprobado");
 
                 }
 
@@ -55,7 +55,7 @@ namespace _1.Sistema_registro_estudiantes
             public void mostrarDatos()
 
             {
-                Console.WriteLine($"El nombre del estudiante es: {nombre} | su promedio es de: {calcularProm()} | el estudiante está: {resultado()} ");
+                Console.WriteLine($"El nombre del estudiante es: {nombre} | su promedio es de: {calcularProm():F2} | el estudiante está: {resultado()} ");
 
 
             }
@@ -90,8 +90,12 @@ namespace _1.Sistema_registro_estudiantes
 
                 Console.Write("Resultado de la nota 3: "); e.nota3 = double.Parse(Console.ReadLine());
 
+                Console.WriteLine();
+
                 estudiantes.Add(e);
             }
+
+            Estudiante pro = estudiantes[0];
 
             Console.WriteLine("\n--- LISTADO DE  ESTUDIANTES  ---");
 
@@ -99,11 +103,19 @@ namespace _1.Sistema_registro_estudiantes
 
             {
                 e.mostrarDatos();
+                Console.WriteLine();
+                if(e.calcularProm()>pro.calcularProm())
+
+                {
+                    pro = e;
+
+                }
+
             }
 
+            Console.WriteLine($"El mejor estudiante es: ");
 
-
-
+            pro.mostrarDatos();
 
 
 
