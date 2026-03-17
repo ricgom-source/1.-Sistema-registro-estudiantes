@@ -78,26 +78,26 @@ namespace _2.Sistema_de_inventario_de_productos
         {
             List<Producto> productos = new List<Producto>();
 
-            Console.WriteLine("¿Cuantos productos desea registrar:_ ");
+            Console.Write("¿Cuantos productos desea registrar:_ ");
 
             int n = int.Parse(Console.ReadLine());
 
-            for(int i=0;i < n;i++)
+            for (int i = 0; i < n; i++)
 
             {
                 Producto p = new Producto();
 
-                Console.WriteLine($"\nProducto {i+1}");
+                Console.WriteLine($"\nProducto {i + 1}");
 
-                Console.WriteLine("Nombre del producto: ");
+                Console.Write ("Nombre del producto: ");
 
                 p.nombre = Console.ReadLine();
 
-                Console.WriteLine("Precio del producto: ");
+                Console.Write("Precio del producto: Q  ");
 
                 p.precio = double.Parse(Console.ReadLine());
 
-                Console.WriteLine("Cantidad de producto: ");
+                Console.Write("Cantidad de producto: ");
 
                 p.cantidad = int.Parse(Console.ReadLine());
 
@@ -118,6 +118,8 @@ namespace _2.Sistema_de_inventario_de_productos
 
                 p.mostrarDatos();
 
+                Console.WriteLine();
+
                 valorinventario += p.calcularValortot();
 
                 if(p.precio>masCaro.precio)
@@ -131,7 +133,15 @@ namespace _2.Sistema_de_inventario_de_productos
 
             }
 
+            Console.WriteLine();
 
+            Console.WriteLine($"El valor total del inventario es de: Q{valorinventario:F2}");
+
+            Console.WriteLine();
+
+            Console.WriteLine($"El producto mas caro es: ");
+
+            masCaro.mostrarDatos();
 
 
         }
