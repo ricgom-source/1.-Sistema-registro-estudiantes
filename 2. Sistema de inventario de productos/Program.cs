@@ -76,7 +76,20 @@ namespace _2.Sistema_de_inventario_de_productos
         static void Main(string[] args)
 
         {
+            List<Producto> productos = new List<Producto>();
 
+            Console.WriteLine("¿Cuantos productos desea registrar:_ ");
+
+            int n = int.Parse(Console.ReadLine());
+
+            for(int i=0;i < n;i++)
+
+            {
+
+
+
+
+            }
 
 
 
