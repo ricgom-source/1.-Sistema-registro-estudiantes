@@ -85,6 +85,24 @@ namespace _2.Sistema_de_inventario_de_productos
             for(int i=0;i < n;i++)
 
             {
+                Producto p = new Producto();
+
+                Console.WriteLine($"\nProducto {i+1}");
+
+                Console.WriteLine("Nombre del producto: ");
+
+                p.nombre = Console.ReadLine();
+
+                Console.WriteLine("Precio del producto: ");
+
+                p.precio = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("Cantidad de producto: ");
+
+                p.cantidad = int.Parse(Console.ReadLine());
+
+                productos.Add(p);
+
 
 
 
